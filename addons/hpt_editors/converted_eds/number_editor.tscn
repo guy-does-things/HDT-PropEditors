@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://6aas1xyu7cc1"]
+
+[ext_resource type="Script" path="res://addons/hpt_editors/scripts/number_editor.gd" id="1_h3rtb"]
+
+[node name="NumberEditor" type="HBoxContainer"]
+script = ExtResource("1_h3rtb")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpinBox" type="SpinBox" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -4.29497e+09
+max_value = 4.29497e+09
+step = 0.001
+
+[connection signal="value_changed" from="SpinBox" to="." method="_on_spin_box_value_changed"]

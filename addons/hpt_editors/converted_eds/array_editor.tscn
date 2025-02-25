@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0lwj0ft3tjwq"]
+
+[ext_resource type="Script" path="res://addons/hpt_editors/scripts/array_editor.gd" id="1_acxn6"]
+[ext_resource type="PackedScene" uid="uid://6aas1xyu7cc1" path="res://addons/hpt_editors/converted_eds/number_editor.tscn" id="2_p4440"]
+
+[node name="ArrayEditor" type="VBoxContainer"]
+offset_right = 770.0
+offset_bottom = 517.0
+script = ExtResource("1_acxn6")
+prop_name = "ARRAY_NAME_HERE"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ARRAY_NAME_HERE"
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Array (size 0)"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ArrayContentsVbox" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="ArraySize" parent="PanelContainer/ArrayContentsVbox" instance=ExtResource("2_p4440")]
+unique_name_in_owner = true
+layout_mode = 2
+prop_name = "Size"
+
+[node name="ElementEditorParent" type="VBoxContainer" parent="PanelContainer/ArrayContentsVbox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NewEleButton" type="Button" parent="PanelContainer/ArrayContentsVbox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add Element"
+
+[connection signal="toggled" from="HBoxContainer/Button" to="." method="_on_button_toggled"]
+[connection signal="value_changed" from="PanelContainer/ArrayContentsVbox/ArraySize" to="." method="_on_array_size_value_changed"]
+[connection signal="pressed" from="PanelContainer/ArrayContentsVbox/NewEleButton" to="." method="_on_new_ele_button_pressed"]

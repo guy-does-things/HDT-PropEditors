@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkxa2wlkxi2y"]
+
+[ext_resource type="Script" path="res://addons/hpt_editors/scripts/neo_editor.gd" id="1_qxbmc"]
+
+[node name="Vec4Editor" type="HBoxContainer"]
+offset_right = 770.0
+offset_bottom = 61.0
+script = ExtResource("1_qxbmc")
+prop_name = "VARIABLE_HEART_HERE"
+test2 = 2
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "VARIABLE_HEART_HERE"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "NULL or unsupported value :("

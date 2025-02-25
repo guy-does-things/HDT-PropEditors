@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg33fc6f5hnrm"]
+
+[ext_resource type="Script" path="res://addons/hpt_editors/scripts/color_editor.gd" id="1_4ceaj"]
+
+[node name="ColorEditor" type="HBoxContainer"]
+script = ExtResource("1_4ceaj")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="color_changed" from="ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]

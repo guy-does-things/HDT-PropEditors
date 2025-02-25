@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://0mp1hp4iurka"]
+
+[ext_resource type="Script" path="res://addons/hpt_editors/scripts/enum_editor.gd" id="1_8oeqc"]
+
+[node name="EnumEditor" type="HBoxContainer"]
+script = ExtResource("1_8oeqc")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionButton" type="OptionButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]

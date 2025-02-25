@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://g3hydy744jac"]
+
+[ext_resource type="Script" path="res://addons/hpt_editors/scripts/bool_editor.gd" id="1_t0pr1"]
+
+[node name="BoolEditor" type="HBoxContainer"]
+script = ExtResource("1_t0pr1")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CheckBox" type="CheckBox" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://buqff2wsuwupg"]
+
+[ext_resource type="Script" path="res://addons/hpt_editors/scripts/flag_editor.gd" id="1_ba8t5"]
+
+[node name="FlagEditor" type="HBoxContainer"]
+script = ExtResource("1_ba8t5")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuButton" type="MenuButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Press To Show Flags"
