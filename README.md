@@ -1,5 +1,5 @@
 # HDT-PropEditors
-reimplementation of the basic godot inspector inbuilt primitive editors,
+reimplementation of the basic godot inspector inbuilt primitive editors, that i made while i was working on another plugin
 
 ## [Installation]
 just drag the /addons folder to your root project, you don't even have to enable anything
